@@ -6,6 +6,7 @@ import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 //added build settings package
 //build test 2 updated cli
 //aligned version
+//switched version in code
 
 class App extends React.Component {
   constructor() {
