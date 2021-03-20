@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "codingchallenge62e448d4": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

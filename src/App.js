@@ -116,10 +116,17 @@ class App extends React.Component {
           <td>{firstName}</td>
           <td>{lastName}</td>
           <td id="min-pay-table" dir="rtl">
-            {minPaymentPercentage}%
+            {minPaymentPercentage.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+            %
           </td>
           <td id="balance-table" dir="rtl">
-            ${balance}.00
+            {balance.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
           </td>
           <td>
             <button onClick={() => this.deleteRow(id)}>X</button>
@@ -160,10 +167,12 @@ class App extends React.Component {
             <div id="total">Total</div>
             <div id="balance">
               {"$" +
-                this.state.data.reduce(
-                  (acc, cur) => acc + (cur.isChecked ? cur.balance : 0),
-                  0
-                )}
+                this.state.data
+                  .reduce(
+                    (acc, cur) => acc + (cur.isChecked ? cur.balance : 0),
+                    0
+                  )
+                  .toLocaleString()}
             </div>
           </div>
           <div id="checked-row">
