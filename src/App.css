@@ -24,7 +24,7 @@ table {
 
 #total-row {
   margin-left: 200px;
-  width: 400px;
+  width: 420px;
   display: table;
   table-layout: fixed; /*Optional*/
   border-spacing: 10px;
@@ -37,10 +37,10 @@ table {
 }
 
 #total {
-  width: 537px;
+  width: 520px;
 }
 #balance {
-  width: 40px;
+  width: 56px;
 }
 
 #checked-row {
@@ -60,6 +60,5 @@ table {
   padding-left: 50px;
 }
 
-/* #total-row-count {
-  padding-right: 30px;
-} */
+#min-pay-table {
+}

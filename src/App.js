@@ -74,7 +74,9 @@ class App extends React.Component {
 
   addRow(creditor, firstName, lastName, minPay, balance) {
     const customers = this.state.data.concat({
-      id: this.state.data[this.state.data.length - 1].id + 1,
+      id: this.state.data.length
+        ? this.state.data[this.state.data.length - 1].id + 1
+        : 0,
       creditorName: creditor,
       firstName: firstName,
       lastName: lastName,
@@ -113,8 +115,12 @@ class App extends React.Component {
           <td>{creditorName}</td>
           <td>{firstName}</td>
           <td>{lastName}</td>
-          <td>{minPaymentPercentage}</td>
-          <td>{balance}</td>
+          <td id="min-pay-table" dir="rtl">
+            {minPaymentPercentage}%
+          </td>
+          <td id="balance-table" dir="rtl">
+            ${balance}.00
+          </td>
           <td>
             <button onClick={() => this.deleteRow(id)}>X</button>
           </td>
@@ -153,10 +159,11 @@ class App extends React.Component {
           <div id="total-row">
             <div id="total">Total</div>
             <div id="balance">
-              {this.state.data.reduce(
-                (acc, cur) => acc + (cur.isChecked ? cur.balance : 0),
-                0
-              )}
+              {"$" +
+                this.state.data.reduce(
+                  (acc, cur) => acc + (cur.isChecked ? cur.balance : 0),
+                  0
+                )}
             </div>
           </div>
           <div id="checked-row">
