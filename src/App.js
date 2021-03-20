@@ -4,6 +4,7 @@ import AddDebt from "./AddDebt";
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 
 //added build settings package
+//build test 2 updated cli
 
 class App extends React.Component {
   constructor() {
