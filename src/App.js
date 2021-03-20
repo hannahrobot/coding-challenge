@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import AddDebt from "./AddDebt";
+import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 
 class App extends React.Component {
   constructor() {
@@ -187,10 +188,11 @@ class App extends React.Component {
               )}
             </div>
           </div>
+          <AmplifySignOut />
         </div>
       );
     }
   }
 }
 
-export default App;
+export default withAuthenticator(App);
