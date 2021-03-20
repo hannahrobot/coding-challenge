@@ -3,6 +3,8 @@ import React from "react";
 import AddDebt from "./AddDebt";
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 
+//added build settings package
+
 class App extends React.Component {
   constructor() {
     super();
