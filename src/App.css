@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+  display: flex;
+}
+
+#column-names td {
+  padding: 10px;
+  font-weight: bold;
+}
+
+table {
+  width: 1000;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+#add-debt-wrapper {
+  margin-left: 200px;
+}
+
+#add-debt-wrapper input {
+  width: 99px;
+}
+
+#total-row {
+  margin-left: 200px;
+  width: 400px;
+  display: table;
+  table-layout: fixed; /*Optional*/
+  border-spacing: 10px;
+  background-color: rgb(60, 160, 253); /*Optional*/
+}
+
+#total-row div {
+  display: table-cell;
+  font-weight: bold;
+}
+
+#total {
+  width: 537px;
+}
+#balance {
+  width: 40px;
+}
+
+#checked-row {
+  margin-left: 200px;
+  width: 550px;
+  display: table;
+  table-layout: fixed; /*Optional*/
+  border-spacing: 10px;
+}
+
+#checked-row div {
+  display: table-cell;
+  font-weight: bold;
+}
+
+#total-checked-count {
+  padding-left: 50px;
+}
+
+/* #total-row-count {
+  padding-right: 30px;
+} */
